@@ -25,11 +25,11 @@ node {
                         dockerImage.push() 
             }
         }
-	
+	/*
        stage('Cleaning up') { 
                 sh "docker rmi $registry:$BUILD_NUMBER" 
 
-        } 
+        } */
 	
 	stage('Deploy to k8s') { 
 				sh 'kubectl apply -f deploy/deploy.yml'
