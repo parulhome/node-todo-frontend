@@ -32,7 +32,7 @@ node {
         } */
 	
 	stage('Deploy to k8s') { 
-				sh 'kubectl apply -f deploy/deploy.yml'
+				sh 'kubectl apply -f deploy.yml'
 
         }
     
