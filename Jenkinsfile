@@ -32,8 +32,14 @@ node {
         } */
 	
 	stage('Deploy to k8s') { 
-				sh 'kubectl apply -f deploy.yaml'
+		
+	  kubernetesDeploy(
+   		 kubeconfigId: 'kubeconfig',
+   		 configs: 'deploy.yml',
+   		 enableConfigSubstitution: true
+	 )	
 
         }
+	
     
 }
